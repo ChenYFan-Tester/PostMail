@@ -5,12 +5,10 @@
   "repository": "https://github.com/ChenYFan-Tester/PostMail",
   "env": {
     "SMTP_username": {
-      "description": "邮件SMTP登录用户名",
-      "generator": "secret"
+      "description": "邮件SMTP登录用户名"
     },
     "SMTP_password": {
-      "description": "邮件SMTP登录用户名对应的密码",
-      "generator": "secret"
+      "description": "邮件SMTP登录用户名对应的密码"
     }
   },
   "environments": {
