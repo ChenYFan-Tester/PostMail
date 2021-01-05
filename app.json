@@ -1,0 +1,19 @@
+{
+  "name": "POST邮件者",
+  "description": "利用Heroku实现POST发送邮件",
+  "image": "heroku/python",
+  "repository": "https://github.com/ChenYFan-Tester/PostMail",
+  "env": {
+    "SECRET_KEY": {
+      "SMTP_username": "SMTP邮箱账号",
+      "SMTP_password": "SMTP邮箱密码"
+    }
+  },
+  "environments": {
+    "test": {
+      "scripts": {
+        "test": "python run.py"
+      }
+    }
+  }
+}
