@@ -4,11 +4,35 @@
   "image": "heroku/python",
   "repository": "https://github.com/ChenYFan-Tester/PostMail",
   "env": {
-    "SMTP_username": {
-      "description": "邮件SMTP登录用户名"
+    "DEFAULT_RECEIVER": {
+      "description": "缺省的邮件接收邮箱"
     },
-    "SMTP_password": {
-      "description": "邮件SMTP登录用户名对应的密码"
+    "DEFAULT_SENDER_NAME": {
+      "description": "缺省的发送者姓名"
+    },
+	"MAIL_HOST": {
+      "description": "SMTP服务器地址, 如 smtp.126.com"
+    },
+	"MAIL_ADDRESS": {
+      "description": "服务器登录的邮箱地址"
+    },
+	"PASSWORD": {
+      "description": "服务器登录的邮箱密码"
+    },
+	"SECRET_KEY": {
+      "description": "用于验证身份的key, 留空表示不启用key验证机制"
+    },
+	"AUTO_CC": {
+      "description": "对于接收者不包含缺省接收邮箱的请求, 自动抄送一份给缺省邮件接收邮箱, 用于避免接口滥用",
+	  "value": True
+    },
+	"RETRY_TIMES": {
+      "description": "邮件发送失败时的自动重试次数",
+	  "value": 5
+    },
+	"MAIL_PER_CONNECTION": {
+      "description": "每次连接限制发送的邮件数量, 如 126限制每次连接仅可发送10封邮件",
+	  "value": 10
     }
   },
   "environments": {
