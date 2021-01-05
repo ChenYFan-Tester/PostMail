@@ -3,16 +3,16 @@ from __future__ import unicode_literals
 from email.mime.text import MIMEText
 import smtplib
 
-DEFAULT_RECEIVER = ""       # 缺省的邮件接收邮箱
-DEFAULT_SENDER_NAME = ""    # 缺省的发送者姓名
-MAIL_HOST = ""              # SMTP服务器地址, 如 smtp.126.com
-MAIL_ADDRESS = ""           # 服务器登录的邮箱地址
-PASSWORD = ""               # 服务器登录的邮箱密码
+DEFAULT_RECEIVER = os.environ.get('DEFAULT_RECEIVER')
+DEFAULT_SENDER_NAME = os.environ.get('DEFAULT_SENDER_NAME')
+MAIL_HOST = os.environ.get('MAIL_HOST')
+MAIL_ADDRESS = os.environ.get('MAIL_ADDRESS')
+PASSWORD = os.environ.get('PASSWORD')
 
-SECRET_KEY = ""             # 用于验证身份的key, 留空表示不启用key验证机制
-AUTO_CC = True              # 对于接收者不包含缺省接收邮箱的请求, 自动抄送一份给缺省邮件接收邮箱, 用于避免接口滥用
-RETRY_TIMES = 5             # 邮件发送失败时的自动重试次数
-MAIL_PER_CONNECTION = 10    # 每次连接限制发送的邮件数量, 如 126限制每次连接仅可发送10封邮件
+SECRET_KEY = os.environ.get('SECRET_KEY')
+AUTO_CC = os.environ.get('AUTO_CC')
+RETRY_TIMES = os.environ.get('RETRY_TIMES')
+MAIL_PER_CONNECTION = os.environ.get('MAIL_PER_CONNECTION')
 
 
 class MailSender(object):
