@@ -11,7 +11,7 @@
       "description": "缺省的发送者姓名"
     },
     "MAIL_HOST": {
-      "description": "SMTP服务器地址\, 如 smtp\.126\.com"
+      "description": "SMTP服务器地址, 如 smtp.126.com"
     },
     "MAIL_ADDRESS": {
       "description": "服务器登录的邮箱地址"
@@ -20,10 +20,10 @@
       "description": "服务器登录的邮箱密码"
     },
     "SECRET_KEY": {
-      "description": "用于验证身份的key\, 留空表示不启用key验证机制"
+      "description": "用于验证身份的key, 留空表示不启用key验证机制"
     },
     "AUTO_CC": {
-      "description": "对于接收者不包含缺省接收邮箱的请求\, 自动抄送一份给缺省邮件接收邮箱\, 用于避免接口滥用",
+      "description": "对于接收者不包含缺省接收邮箱的请求, 自动抄送一份给缺省邮件接收邮箱, 用于避免接口滥用",
       "value": "True"
     },
     "RETRY_TIMES": {
