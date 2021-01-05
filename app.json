@@ -4,9 +4,13 @@
   "image": "heroku/python",
   "repository": "https://github.com/ChenYFan-Tester/PostMail",
   "env": {
-    "SECRET_KEY": {
-      "SMTP_username": "SMTP邮箱账号",
-      "SMTP_password": "SMTP邮箱密码"
+    "SMTP_username": {
+      "description": "邮件SMTP登录用户名",
+      "generator": "secret"
+    },
+    "SMTP_password": {
+      "description": "邮件SMTP登录用户名对应的密码",
+      "generator": "secret"
     }
   },
   "environments": {
