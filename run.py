@@ -17,5 +17,4 @@ def mail():
     except Exception as ex:
         return jsonify({'status': 'failed', 'msg': str(ex)})
 
-if __name__ == '__main__':
-    app.run(host="0.0.0.0")
+app.run(environ.get('PORT'))
